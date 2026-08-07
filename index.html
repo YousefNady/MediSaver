@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="MediSaver – Instant healthcare discounts across hospitals, clinics, labs, pharmacies and more in Egypt. Download the app today." />
+  <meta name="keywords" content="healthcare discounts, Egypt, medical vouchers, hospitals, clinics, pharmacies" />
+  <meta property="og:title" content="MediSaver – Better Healthcare. Smarter Savings." />
+  <meta property="og:description"
+    content="Access exclusive discounts on healthcare services across Egypt. Download MediSaver on iOS or Android." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+
+  <!-- 
+    --Restore the user's saved language preference and apply the
+    --correct document direction before React renders the app.
+    --This prevents the initial LTR/RTL flicker on page load.
+      -->
+<script>
+  const lang = localStorage.getItem('medisaver_lang') || 'ar';
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+  const savedTheme = localStorage.getItem('medisaver_theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : (prefersDark ? 'dark' : 'light');
+  document.documentElement.classList.toggle('dark', theme === 'dark');
+</script>
+
+  <title>MediSaver – Better Healthcare. Smarter Savings.</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
