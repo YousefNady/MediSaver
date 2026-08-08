@@ -132,7 +132,7 @@ export default function PhoneMockup() {
 
             return (
               <motion.div
-                key={label}
+                key={i}
                 initial={{
                   opacity: 0,
                   y: 14,

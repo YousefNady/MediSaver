@@ -55,9 +55,9 @@ export default function CategoryDetail() {
 
           {/* Stats + CTA sidebar */}
           <StaggerContainer className="space-y-4" stagger={0.08}>
-            {page.stats.map(({ value, label }) => (
+            {page.stats.map(({ value, label }, i) => (
               <StaggerItem
-                key={label}
+                key={i}
                 className="bg-gradient-to-br from-brand-50 to-teal-50/50 dark:from-gray-900 dark:to-gray-900 rounded-2xl p-6 border border-brand-100/50 dark:border-gray-800"
               >
                 <div className="font-display text-3xl font-extrabold text-gradient mb-1">
@@ -95,9 +95,9 @@ export default function CategoryDetail() {
           </Reveal>
 
           <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" stagger={0.08}>
-            {page.examples.map(({ name, location, tag }) => (
+            {page.examples.map(({ name, location, tag }, i) => (
               <StaggerItem
-                key={name}
+                key={i}
                 className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-5 hover:border-brand-100 dark:hover:border-brand-500/30 hover:shadow-md transition-all duration-200"
               >
                 <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 ${categoryColors[slug]}`}>
@@ -135,9 +135,9 @@ export default function CategoryDetail() {
           </Reveal>
 
           <StaggerContainer className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto" stagger={0.1}>
-            {page.plans.map(({ name, price, period, tagline, features, featured }) => (
+            {page.plans.map(({ name, price, period, tagline, features, featured }, i) => (
               <StaggerItem
-                key={name}
+                key={i}
                 className={
                   featured
                     ? 'relative bg-brand-gradient rounded-2xl p-7 text-white shadow-brand'

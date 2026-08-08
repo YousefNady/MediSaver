@@ -163,8 +163,8 @@ export default function Home() {
       <div className="bg-brand-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-6" stagger={0.1}>
-            {h.stats.map(({ value, label }) => (
-              <StaggerItem key={label} className="text-center text-white">
+            {h.stats.map(({ value, label }, i) => (
+              <StaggerItem key={i} className="text-center text-white">
                 <div className="font-display text-3xl font-extrabold mb-0.5">
                   <CountUp value={value} />
                 </div>
@@ -191,7 +191,7 @@ export default function Home() {
           {h.features.items.map(({ title, desc }, i) => {
             const Icon = featureIcons[i]
             return (
-              <StaggerItem key={title}>
+              <StaggerItem key={i}>
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.25, ease: EASE }}
@@ -259,7 +259,7 @@ export default function Home() {
             {h.about.categories.map(({ label, count }, i) => {
               const Icon = categoryIcons[i]
               return (
-                <StaggerItem key={label}>
+                <StaggerItem key={i}>
                   <Link
                     to={`/categories/${CATEGORY_SLUGS[i]}`}
                     className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl px-5 py-4 hover:border-brand-100 hover:shadow-md transition-all duration-200 dark:border-gray-800 dark:bg-gray-900"
@@ -290,8 +290,11 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-          <div dir="ltr" className="flex w-max gap-4 animate-marquee">
+        <div
+          dir="ltr"
+          className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]"
+        >
+          <div className="flex w-max gap-4 animate-marquee">
             {[...h.partners.names, ...h.partners.names].map((name, i) => (
               <div
                 key={`${name}-${i}`}
@@ -318,8 +321,8 @@ export default function Home() {
         </div>
 
         <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {h.testimonials.items.map(({ name, role, quote, rating }) => (
-            <StaggerItem key={name}>
+          {h.testimonials.items.map(({ name, role, quote, rating }, i) => (
+            <StaggerItem key={i}>
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.25, ease: EASE }}

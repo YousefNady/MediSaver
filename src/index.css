@@ -60,9 +60,12 @@ body {
     animation: marquee 32s linear infinite;
   }
 
-  /* [dir='rtl'] .animate-marquee {
-    animation-direction: reverse;
-  } */
+  /* The partner logo strip is intentionally forced to dir="ltr" in Home.jsx
+     (on both the outer mask wrapper and the inner track) so it always
+     scrolls the same way regardless of site language. Do NOT rely on a
+     [dir='rtl'] override here — the elements never actually carry
+     dir="rtl" once forced to ltr, and reversing animation-direction alone
+     doesn't fix the underlying RTL block-alignment issue anyway. */
 }
 
 @media (prefers-reduced-motion: reduce) {

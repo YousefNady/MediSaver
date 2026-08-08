@@ -46,7 +46,7 @@ const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value }
   const formData = new FormData();
   // TODO: replace with your own free Web3Forms access key from https://web3forms.com
   // (the original key belonged to the client's account and was removed for this portfolio copy).
-  formData.append("access_key", "596835ef-16a7-4157-82a4-17f205956ed8");
+  formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY");
   formData.append("name", form.name);
   formData.append("email", form.email);
   formData.append("subject", form.subject);
@@ -95,7 +95,7 @@ const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value }
             const Icon = methodIcons[i]
             const href = methodHrefs[i]
             return (
-              <StaggerItem key={title} className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 dark:border-gray-800 dark:bg-gray-900">
+              <StaggerItem key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 dark:border-gray-800 dark:bg-gray-900">
                 <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 ${methodColors[i]}`}>
                   <Icon size={20} />
                 </div>

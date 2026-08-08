@@ -54,9 +54,9 @@ export default function About() {
           </Reveal>
 
           <StaggerContainer className="grid grid-cols-2 gap-4" stagger={0.1}>
-            {a.story.stats.map(({ stat, label }) => (
+            {a.story.stats.map(({ stat, label }, i) => (
               <StaggerItem
-                key={label}
+                key={i}
                 className="bg-gradient-to-br from-brand-50 to-teal-50/50 dark:from-gray-900 dark:to-gray-900 rounded-2xl p-6 border border-brand-100/50 dark:border-gray-800"
               >
                 <div className="font-display text-3xl font-extrabold text-gradient mb-1">
@@ -84,7 +84,7 @@ export default function About() {
           {a.values.items.map(({ title, desc }, i) => {
             const Icon = valueIcons[i]
             return (
-              <StaggerItem key={title}>
+              <StaggerItem key={i}>
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.25, ease: EASE }}
@@ -118,7 +118,7 @@ export default function About() {
           {a.services.categories.map(({ title, desc }, i) => {
             const Icon = categoryIcons[i]
             return (
-              <StaggerItem key={title}>
+              <StaggerItem key={i}>
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.25, ease: EASE }}

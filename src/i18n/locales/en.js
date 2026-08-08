@@ -122,7 +122,7 @@ const en = {
       { value: "200+", label: "Healthcare Providers" },
       { value: "50K+", label: "Active Subscribers" },
       { value: "4.8★", label: "App Store Rating" },
-      { value: "60%", label: "Average Savings" },
+      { value: "30%", label: "Average Savings" },
     ],
     features: {
       eyebrow: "Why MediSaver",
@@ -243,7 +243,7 @@ const en = {
         },
         {
           q: "How much can I save?",
-          a: "Discounts vary by provider and service, averaging around 60% across hospitals, labs, radiology centers, pharmacies, and clinics.",
+          a: "Discounts vary by provider and service, averaging around 30% across hospitals, labs, radiology centers, pharmacies, and clinics.",
         },
         {
           q: "How do I use my discount?",
@@ -303,7 +303,7 @@ const en = {
       stats: [
         {
           name: "Healthcare Savings",
-          stat: "60% avg.",
+          stat: "30% avg.",
           label: "across all categories",
         },
         { name: "Provider Network", stat: "200+", label: "verified providers" },
@@ -384,7 +384,7 @@ const en = {
         "MediSaver partners with 80+ hospitals nationwide so a medical emergency or planned procedure never has to mean choosing between care and cost. Show your membership code at admission and the discount applies instantly.",
       stats: [
         { value: "80+", label: "Partner Hospitals" },
-        { value: "60%", label: "Avg. Discount" },
+        { value: "30%", label: "Avg. Discount" },
       ],
       benefits: [
         "Reduced rates on consultations, surgeries, and inpatient stays",
@@ -406,7 +406,7 @@ const en = {
         "Routine bloodwork shouldn't be something families put off. Our network of 45+ accredited labs offers meaningful discounts on individual tests and full diagnostic packages alike.",
       stats: [
         { value: "45+", label: "Partner Labs" },
-        { value: "60%", label: "Avg. Discount" },
+        { value: "30%", label: "Avg. Discount" },
       ],
       benefits: [
         "Discounts on individual tests and bundled diagnostic packages",
@@ -427,7 +427,7 @@ const en = {
         "Imaging is often where healthcare costs spike unexpectedly. Our 30+ partner radiology centers apply your discount automatically, whether it's a routine X-ray or a specialist MRI.",
       stats: [
         { value: "30+", label: "Radiology Centers" },
-        { value: "60%", label: "Avg. Discount" },
+        { value: "30%", label: "Avg. Discount" },
       ],
       benefits: [
         "Discounted X-rays, MRIs, CT scans, and ultrasounds",
@@ -449,7 +449,7 @@ const en = {
         "Medication costs add up fast, especially for ongoing prescriptions. With 60+ partner pharmacies across Egypt, your MediSaver discount applies automatically at checkout — no exceptions, no fine print.",
       stats: [
         { value: "60+", label: "Partner Pharmacies" },
-        { value: "60%", label: "Avg. Discount" },
+        { value: "30%", label: "Avg. Discount" },
       ],
       benefits: [
         "Discounts on prescriptions, vitamins, and healthcare products",
@@ -471,7 +471,7 @@ const en = {
         "From dermatology to physiotherapy, our network of 25+ specialist clinics makes routine and specialist care alike more affordable for you and your family.",
       stats: [
         { value: "25+", label: "Partner Clinics" },
-        { value: "60%", label: "Avg. Discount" },
+        { value: "30%", label: "Avg. Discount" },
       ],
       benefits: [
         "Discounted consultations across specialist clinics",
@@ -508,7 +508,7 @@ const en = {
           tagline: "Full network access for one member",
           features: [
             "All hospitals, labs, radiology centers, pharmacies & clinics",
-            "60% average discount at checkout",
+            "30% average discount at checkout",
             "Valid for 12 months from subscription date",
           ],
         },
